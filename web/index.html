@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GIS Fasilitas Umum - Kota Bengkulu</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Pemetaan &amp; Analisis Fasilitas Umum</h1>
+  <span class="sub">Kota Bengkulu &middot; data sintetis</span>
+</header>
+<p id="err" hidden>Data gagal dimuat. Jalankan lewat server lokal: <code>python -m http.server</code> di folder <code>web/</code>.</p>
+<section class="stats" id="stats"></section>
+<main>
+  <aside>
+    <h2>Filter Kategori</h2>
+    <div id="chips"></div>
+    <input id="search" type="search" placeholder="Cari nama fasilitas...">
+    <h2>Lapisan Analisis</h2>
+    <label class="row"><input type="checkbox" id="tCov"> Radius cakupan: <b id="rv">1.0</b> km</label>
+    <input type="range" id="radius" min="0.5" max="3" step="0.5" value="1">
+    <label class="row"><input type="checkbox" id="tGap"> Peta kesenjangan layanan</label>
+    <h2>Kandidat Lokasi Baru</h2>
+    <ol id="cand"></ol>
+  </aside>
+  <div id="map"></div>
+</main>
+<section class="chart"><canvas id="chart"></canvas></section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

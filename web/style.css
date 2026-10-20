@@ -1,0 +1,23 @@
+:root{--bg:#f4f7f9;--card:#fff;--ink:#12303b;--muted:#5d7783;--brand:#0f766e;--line:#dbe5ea}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1a20;--card:#15262e;--ink:#e6f0f3;--muted:#8fa8b3;--brand:#0f766e;--line:#254049}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+header{background:var(--brand);color:#fff;padding:14px 20px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+header h1{font-size:1.2rem;margin:0}.sub{opacity:.85;font-size:.85rem}
+#err{margin:12px 20px;padding:10px;background:#fee2e2;color:#7f1d1d;border-radius:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;padding:16px 20px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.card small{color:var(--muted)}.card b{display:block;font-size:1.5rem;margin-top:2px}
+main{display:grid;grid-template-columns:290px 1fr;gap:12px;padding:16px 20px}
+aside{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;max-height:520px;overflow:auto}
+aside h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:14px 0 8px}
+aside h2:first-child{margin-top:0}
+#chips label,.row{display:flex;align-items:center;gap:8px;font-size:.9rem;margin:5px 0;cursor:pointer}
+.dot{width:11px;height:11px;border-radius:50%;flex:none}
+input[type=search]{width:100%;padding:8px 10px;margin-top:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+input[type=range]{width:100%}
+#cand{padding-left:18px;margin:0;font-size:.85rem}
+#cand li{cursor:pointer;margin:6px 0}#cand li:hover{color:var(--brand);text-decoration:underline}
+#map{height:520px;border-radius:12px;border:1px solid var(--line)}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 20px 20px;padding:14px;height:320px}
+@media(max-width:760px){main{grid-template-columns:1fr}aside{max-height:none}}
