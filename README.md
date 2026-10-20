@@ -13,10 +13,7 @@ Alur: generate_data.py -> facilities.geojson -> analysis.py -> analysis.json -> 
     python analysis/analysis.py
     cd web && python -m http.server 8000   # buka http://localhost:8000
 
-## Desain
-- Palet: teal #0f766e (aksen), latar abu kebiruan, mode gelap otomatis.
-- Warna kategori: Kesehatan merah, Pendidikan biru, Ibadah hijau, Taman kuning, Transportasi ungu.
-- Tata letak: kartu statistik, sidebar filter + peta, grafik batang; responsif.
+https://fainayafadillah.github.io/GIS-fasilitas-umum/
 
 ## Pengembangan Lanjutan
 Data asli OpenStreetMap (Overpass API), analisis jaringan jalan, K-Means, backend Flask/FastAPI, deploy GitHub Pages.
